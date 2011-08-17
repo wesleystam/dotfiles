@@ -1,0 +1,8 @@
+export PATH=""					# Reset PATH
+
+export PATH="/usr/local/bin:/usr/bin" 		# brew
+export PATH="$PATH:/usr/local/sbin:/usr/sbin" 	# brew
+export PATH="$PATH:/sbin:/bin" 			# brew
+export PATH="$PATH:/usr/X11/bin"		# XCode
+
+export CC="/usr/bin/gcc-4.2"			# C compiler
