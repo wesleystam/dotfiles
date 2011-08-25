@@ -1,0 +1,26 @@
+" Directories for swp files
+set backupdir=~/.vim/backup
+set directory=~/.vim/backup
+
+" search stuff
+set incsearch     " do incremental searching
+set hlsearch      " highlight search
+set ignorecase    " case insensitive search
+set smartcase
+
+" NerdTree
+:noremap ,n :NERDTreeToggle<CR>
+
+" Colors
+colorscheme railscasts
+syntax on
+if !has('gui_running')
+	set t_Co=256
+endif
+
+nmap <leader>l :set list!<CR>
+set listchars=tab:▸\ ,eol:¬
+set number
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
