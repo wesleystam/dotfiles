@@ -1,0 +1,3 @@
+alias reload_bash=". ~/.bash_profile"
+alias reload!="echo restarting app; touch tmp/restart.txt"
+alias s="cd .."
