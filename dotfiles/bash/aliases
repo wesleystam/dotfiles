@@ -1,3 +1,9 @@
 alias reload_bash=". ~/.bash_profile"
 alias reload!="echo restarting app; touch tmp/restart.txt"
 alias s="cd .."
+
+alias pryr="pry -r ./config/environment"
+alias vi="mvim -v"
+
+alias gd="cd vendor/plugins/gaia"
+alias sd="cd ../../../"
