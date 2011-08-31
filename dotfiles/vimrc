@@ -42,5 +42,5 @@ set shiftwidth=2
 set softtabstop=2
 set mouse=a
 set history=500
-set nowrap
+set wrap
 set autoindent
