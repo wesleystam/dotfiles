@@ -9,9 +9,13 @@ export PATH="$PATH:~/bin"																	# extra
 export EDITOR=vi
 export CC="/usr/bin/gcc-4.2"															# C compiler
 export DYLD_LIBRARY_PATH="/usr/local/opt/instantclient"		# Oracle Instant Client
-export NLS_LANG=DUTCH_NETHERLANDS.WE8MSWIN1252						# Oracle Doris
+export LD_LIBRARY_PATH="/usr/local/opt/instantclient"		  # Oracle Instant Client
+#export NLS_LANG=DUTCH_NETHERLANDS.WE8MSWIN1252						# Oracle Doris
 
 export ORACLE_HOME=/usr/local/opt/instantclient
-export PATH=$PATH:$ORACLE_HOME/bin
-export TNS_ADMIN=$ORACLE_HOME
+export PATH=$PATH:$ORACLE_HOME
+export TNS_ADMIN=$ORACLE_HOME/network/admin
 export SQLPATH=$ORACLE_HOME
+export ORACLE_SID=asdb
+
+export ARCHFLAGS='-arch x86_64'

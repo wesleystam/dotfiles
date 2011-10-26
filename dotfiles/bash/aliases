@@ -1,5 +1,6 @@
-alias reload_bash="eacho reloading shell; . ~/.bash_profile"
+alias reload_bash="echo reloading shell; . ~/.bash_profile"
 alias reload!="echo restarting app; touch tmp/restart.txt"
+alias pow="echo restarting pow; launchctl unload "$HOME/Library/LaunchAgents/cx.pow.powd.plist" 2>/dev/null || true; launchctl load -Fw "$HOME/Library/LaunchAgents/cx.pow.powd.plist" 2>/dev/null"
 alias s="cd .."
 
 alias vi="mvim -v"
