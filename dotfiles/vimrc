@@ -1,3 +1,6 @@
+" Initialize pathogen
+call pathogen#infect()
+
 " Directories for swp files
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
