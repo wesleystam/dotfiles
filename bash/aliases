@@ -9,4 +9,3 @@ alias gd="cd vendor/plugins/gaia"
 alias sd="cd ../../../"
 
 alias hosts="vi /etc/hosts"
-alias apache="vi /etc/apache2/extra/httpd-vhosts.conf"
