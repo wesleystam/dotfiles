@@ -32,14 +32,16 @@ endif
 command! Q q
 command! W w
 " easier window navigation
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
+:map <C-h> <C-w>h
+:map <C-j> <C-w>j
+:map <C-k> <C-w>k
+:map <C-l> <C-w>l
 
-nmap <leader>l :set list!<CR>
+:map <D-enter> :set fullscreen! <CR>
+:map <leader>l :set list!<CR>
+
 set listchars=tab:▸\ ,eol:¬
-set number
+set number          " Show line numbers
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
@@ -48,3 +50,17 @@ set mouse=a
 set history=500
 set wrap
 set autoindent
+set linespace=2
+set go-=T           " Remove toolbar in MacVim
+
+"tab switching in normal mode
+:map <C-n> :tabnew<CR>
+:map <C-1> :tabn 1<CR>
+:map <C-2> :tabn 2<CR>
+:map <C-3> :tabn 3<CR>
+:map <C-4> :tabn 4<CR>
+:map <C-5> :tabn 5<CR>
+:map <C-6> :tabn 6<CR>
+:map <C-7> :tabn 7<CR>
+:map <C-8> :tabn 8<CR>
+:map <C-9> :tabn 9<CR>
