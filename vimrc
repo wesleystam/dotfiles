@@ -54,13 +54,24 @@ set linespace=2
 set go-=T           " Remove toolbar in MacVim
 
 "tab switching in normal mode
-:map <C-n> :tabnew<CR>
-:map <C-1> :tabn 1<CR>
-:map <C-2> :tabn 2<CR>
-:map <C-3> :tabn 3<CR>
-:map <C-4> :tabn 4<CR>
-:map <C-5> :tabn 5<CR>
-:map <C-6> :tabn 6<CR>
-:map <C-7> :tabn 7<CR>
-:map <C-8> :tabn 8<CR>
-:map <C-9> :tabn 9<CR>
+map <C-n> :tabnew<CR>
+map <C-1> :tabn 1<CR>
+map <C-2> :tabn 2<CR>
+map <C-3> :tabn 3<CR>
+map <C-4> :tabn 4<CR>
+map <C-5> :tabn 5<CR>
+map <C-6> :tabn 6<CR>
+map <C-7> :tabn 7<CR>
+map <C-8> :tabn 8<CR>
+map <C-9> :tabn 9<CR>
+
+"tab switching in insert mode
+map! <C-1> <C-O>:tabn 1<CR>
+map! <C-2> <C-O>:tabn 2<CR>
+map! <C-3> <C-O>:tabn 3<CR>
+map! <C-4> <C-O>:tabn 4<CR>
+map! <C-5> <C-O>:tabn 5<CR>
+map! <C-6> <C-O>:tabn 6<CR>
+map! <C-7> <C-O>:tabn 7<CR>
+map! <C-8> <C-O>:tabn 8<CR>
+map! <C-9> <C-O>:tabn 9<CR>
