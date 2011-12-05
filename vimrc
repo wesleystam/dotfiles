@@ -24,7 +24,7 @@ syntax on                 " Enable syntax highlighting
 filetype plugin indent on " Enable filetype-specific indenting and plugins
 
 " Colors
-colorscheme molokai
+colorscheme bespin
 if !has('gui_running')
 	set t_Co=256
 endif
@@ -52,6 +52,7 @@ set wrap
 set autoindent
 set linespace=2
 set go-=T           " Remove toolbar in MacVim
+set clipboard=unnamed "yy, D and P work with the clipboard. 
 
 "tab switching in normal mode
 map <C-n> :tabnew<CR>
