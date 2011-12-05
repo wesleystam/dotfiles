@@ -55,12 +55,12 @@ set go-=T           " Remove toolbar in MacVim
 
 "tab switching in normal mode
 :map <C-n> :tabnew<CR>
-:map <C-1> :tabn 1<CR>
-:map <C-2> :tabn 2<CR>
-:map <C-3> :tabn 3<CR>
-:map <C-4> :tabn 4<CR>
-:map <C-5> :tabn 5<CR>
-:map <C-6> :tabn 6<CR>
-:map <C-7> :tabn 7<CR>
-:map <C-8> :tabn 8<CR>
-:map <C-9> :tabn 9<CR>
+:map <C-q> :tabn1<CR>
+:map <C-2> :tabn2<CR>
+:map <C-3> :tabn3<CR>
+:map <C-4> :tabn4<CR>
+:map <C-5> :tabn5<CR>
+:map <C-6> :tabn6<CR>
+:map <C-7> :tabn7<CR>
+:map <C-8> :tabn8<CR>
+:map <C-9> :tabn9<CR>
