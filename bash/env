@@ -12,7 +12,6 @@ export CC="/usr/bin/gcc-4.2"																	                    # C compiler
 export NODE_PATH="/usr/local/lib/node_modules/"	                                  # Node JS
 export DYLD_LIBRARY_PATH="/usr/local/opt/instantclient"				                    # Oracle Instant Client
 export DYLD_LIBRARY_PATH="/usr/local/Cellar/mysql/5.5.15/lib:$DYLD_LIBRARY_PATH"  # Mysql
-export LD_LIBRARY_PATH="/usr/local/opt/instantclient"		                          # Oracle Instant Client
 
 export ORACLE_HOME=/usr/local/opt/instantclient
 export PATH=$PATH:$ORACLE_HOME
