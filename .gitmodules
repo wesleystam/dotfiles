@@ -13,3 +13,6 @@
 [submodule "vim/bundle/vim-bundler"]
 	path = vim/bundle/vim-bundler
 	url = git://github.com/tpope/vim-bundler.git
+[submodule "vim/bundle/vim-align"]
+	path = vim/bundle/vim-align
+	url = git://github.com/tsaleh/vim-align.git
