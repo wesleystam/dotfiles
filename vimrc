@@ -15,7 +15,7 @@ set smartcase
 :map <C-t> :FuzzyFinderTextMate<CR>
 :map <C-f> :ruby finder.rescan!<CR>
 " Fuzzy finder: ignore stuff that can't be opened, and generated files
-let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;tmp/**;rdoc/**"
+let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/plugin/**;coverage/**;tmp/**;rdoc/**"
 
 " NerdTree
 :noremap ,n :NERDTreeToggle<CR>
