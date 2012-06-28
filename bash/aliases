@@ -3,6 +3,7 @@ alias reload!="echo restarting app; touch tmp/restart.txt"
 alias pow="echo restarting pow; touch ~/.pow/restart.txt"
 alias s="cd .."
 
+alias devlog="tail -f log/development.log"
 alias vi="mvim -v"
 
 alias gd="cd vendor/plugins/gaia"
