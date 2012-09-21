@@ -6,7 +6,4 @@ alias s="cd .."
 alias devlog="tail -f log/development.log"
 alias vi="mvim -v"
 
-alias gd="cd vendor/plugins/gaia"
-alias sd="cd ../../../"
-
-alias hosts="vi /etc/hosts"
+alias hosts="sudo vi /etc/hosts"
