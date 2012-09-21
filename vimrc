@@ -11,7 +11,6 @@ set hlsearch      " highlight search
 set ignorecase    " case insensitive search
 set smartcase
 
-
 :map <C-t> :FuzzyFinderTextMate<CR>
 :map <C-f> :ruby finder.rescan!<CR>
 " Fuzzy finder: ignore stuff that can't be opened, and generated files
@@ -30,7 +29,9 @@ if !has('gui_running')
 endif
 
 command! Q q
+command! Qa qa
 command! W w
+command! Wa wa
 " easier window navigation
 :map <C-h> <C-w>h
 :map <C-j> <C-w>j
@@ -53,3 +54,8 @@ set autoindent
 set linespace=2
 set go-=T             " Remove toolbar in MacVim
 set clipboard=unnamed " yy, D and P work with the clipboard. 
+
+" Tabs
+:map <C-n> :tabe<CR>
+:map <C-x> :tabp<CR>
+:map <C-c> :tabn<CR>
