@@ -4,6 +4,7 @@ export PATH="/usr/local/bin:/usr/bin"											              # brew
 export PATH="$PATH:/usr/local/sbin:/usr/sbin" 						              # brew
 export PATH="$PATH:/sbin:/bin"														              # brew
 export PATH="$PATH:/usr/X11/bin"													              # XCode
+export PATH="$PATH:$HOME/.rvm/bin"                                      # Add RVM to PATH for scripting
 export PATH="$PATH:~/bin"																	              # extra
 
 export EDITOR=vi
