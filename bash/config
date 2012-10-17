@@ -55,4 +55,4 @@ ps1_rvm()
 
 # Update the command prompt to be <user>:<current_directory>(git_branch) >
 # Note that the git branch is given a special color
-PS1="\n\[$GREEN\]\u:\w \$(ps1_git)\[$BLUE\]\$(ps1_rvm)\[$NO_COLOR\] \n→ "
+PS1="\n\[$GREEN\]\u:\w\$(ps1_git)\[$BLUE\]\$(ps1_rvm)\[$NO_COLOR\] \n→ "
