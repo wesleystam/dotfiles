@@ -1,0 +1,13 @@
+function deploy {
+  cmd="cd deployment && cap "
+  env=" deploy"
+  cmd=$cmd$1$env
+  ssh rails@app-01.rodiinternet.nl "$cmd"
+}
+
+function sonic {
+  cmd="cd deployment && cap "
+  env=" tail"
+  cmd=$cmd$1$env
+  ssh rails@app-01.rodiinternet.nl "$cmd"
+}
