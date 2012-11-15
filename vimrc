@@ -11,11 +11,6 @@ set hlsearch      " highlight search
 set ignorecase    " case insensitive search
 set smartcase
 
-:map <C-t> :FuzzyFinderTextMate<CR>
-:map <C-f> :ruby finder.rescan!<CR>
-" Fuzzy finder: ignore stuff that can't be opened, and generated files
-let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/plugin/**;coverage/**;tmp/**;rdoc/**"
-
 " NerdTree
 :noremap ,n :NERDTreeToggle<CR>
 
@@ -54,6 +49,7 @@ set autoindent
 set linespace=2
 set go-=T             " Remove toolbar in MacVim
 set clipboard=unnamed " yy, D and P work with the clipboard. 
+set laststatus=2      " Always show status line
 
 " Tabs
 :map <C-n> :tabe<CR>

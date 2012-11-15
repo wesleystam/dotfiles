@@ -28,3 +28,6 @@
 [submodule "vim/bundle/vim-enuch"]
 	path = vim/bundle/vim-enuch
 	url = git://github.com/tpope/vim-eunuch.git
+[submodule "vim/bundle/ctrp.vim"]
+	path = vim/bundle/ctrp.vim
+	url = git://github.com/kien/ctrlp.vim.git
