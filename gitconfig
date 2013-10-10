@@ -15,7 +15,5 @@
 
 [guthib]
 	user = wesleystam
-[gui]
-	recentrepo = /Users/wesley/Sites/athena
 [push]
 	default = simple
