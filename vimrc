@@ -110,7 +110,7 @@ function! RunTests(filename)
         "elseif filereadable("Gemfile")
         "    exec ":!bundle exec rspec --color " . a:filename
         else
-            exec ":!rspec --color --format documentation " . a:filename
+            exec ":!spring rspec --color --format documentation " . a:filename
         end
     end
 endfunction
