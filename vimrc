@@ -10,6 +10,8 @@ set incsearch     " do incremental searching
 set hlsearch      " highlight search
 set ignorecase    " case insensitive search
 set smartcase
+" ctrlP
+set wildignore+=*/node_modules/*,*/tmp/*,*.so,*.swp,*.zip
 
 " NerdTree
 :noremap ,n :NERDTreeToggle<CR>
@@ -102,15 +104,9 @@ function! RunTests(filename)
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    if match(a:filename, '\.feature$') != -1
-        exec ":!script/features " . a:filename
+    if filereadable("script/test")
+        exec ":!script/test " . a:filename
     else
-        if filereadable("script/test")
-            exec ":!script/test " . a:filename
-        "elseif filereadable("Gemfile")
-        "    exec ":!bundle exec rspec --color " . a:filename
-        else
-            exec ":!spring rspec --color --format documentation " . a:filename
-        end
+        exec ":!rspec --color --format documentation " . a:filename
     end
 endfunction
