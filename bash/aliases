@@ -4,6 +4,6 @@ alias pow="echo restarting pow; touch ~/.pow/restart.txt"
 alias s="cd .."
 
 alias devlog="tail -f log/development.log"
-alias vi="mvim -v"
+alias vi="vim -v"
 
 alias hosts="sudo vi /etc/hosts"
