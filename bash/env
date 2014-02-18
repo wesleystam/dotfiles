@@ -3,24 +3,10 @@ export PATH=""																						              # Reset PATH
 export PATH="/usr/local/bin:/usr/bin"											              # brew
 export PATH="$PATH:/usr/local/sbin:/usr/sbin" 						              # brew
 export PATH="$PATH:/sbin:/bin"														              # brew
-export PATH="$PATH:/usr/X11/bin"													              # XCode
 export PATH="$PATH:$HOME/.rvm/bin"                                      # Add RVM to PATH for scripting
-export PATH="$PATH:~/bin"																	              # extra
 export PATH="$PATH:/usr/local/share/npm/bin"                            # npm
 
 export EDITOR=vi
 export NODE_PATH="/usr/local/lib/node_modules/"	                        # Node JS
 
-export DYLD_LIBRARY_PATH=/usr/local/opt/instantclient                   # Oracle instant Client
-export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/Applications/MySQL32/lib   # MySQL x86
-
-export ORACLE_HOME=/usr/local/opt/instantclient
-export PATH=$PATH:$ORACLE_HOME
-export TNS_ADMIN=$ORACLE_HOME/network/admin
-export SQLPATH=$ORACLE_HOME
-export ORACLE_SID=asdb
-export NLS_LANG="AMERICAN_AMERICA.AL32UTF8"
-
 export ARCHFLAGS='-arch x86_64'
-
-export export CPPFLAGS=-I/opt/X11/include                               # to install rubys < 1.9.3
