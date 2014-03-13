@@ -49,15 +49,16 @@ set history=500
 set wrap
 set autoindent
 set linespace=2
-set go-=T             " Remove toolbar in MacVim
-set clipboard=unnamed " yy, D and P work with the clipboard. 
-set laststatus=2      " Always show status line
+set go-=T                 " Remove toolbar in MacVim
+set clipboard=unnamedplus " yy, D and P work with the clipboard.
+set laststatus=2          " Always show status line
 
 " Tabs
 :map <C-n> :tabe<CR>
 :map <C-x> :tabp<CR>
 :map <C-c> :tabn<CR>
 
+map <leader>r :w\|:!ruby %<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RUNNING TESTS
