@@ -1,5 +1,3 @@
-. ~/dotfiles/bash/colors
-
 ps1_git()
 {
   local branch="" sha1="" line="" attr="" color=0

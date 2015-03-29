@@ -1,9 +1,5 @@
-alias reload_bash="echo reloading shell; . ~/.bash_profile"
-alias reload!="echo restarting app; touch tmp/restart.txt"
-alias pow="echo restarting pow; touch ~/.pow/restart.txt"
 alias s="cd .."
-
+alias reload="touch tmp/restart.txt"
 alias devlog="tail -f log/development.log"
-alias vi="vim -v"
 
-alias hosts="sudo vi /etc/hosts"
+alias hosts="sudo vim /etc/hosts"

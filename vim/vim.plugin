@@ -1,0 +1,14 @@
+" Vim Plugins
+
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-fugitive'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'thoughtbot/vim-rspec'
+
+" Color schemas
+Plug 'tomasr/molokai'
+
+call plug#end()
