@@ -1,12 +1,8 @@
-export PATH=""																						              # Reset PATH
+export PATH="$PATH:./node_modules/.bin"       # Add NPM modules to PATH
 
-export PATH="/usr/local/bin:/usr/bin"											              # brew
-export PATH="$PATH:/usr/local/sbin:/usr/sbin" 						              # brew
-export PATH="$PATH:/sbin:/bin"														              # brew
-export PATH="$PATH:$HOME/.rvm/bin"                                      # Add RVM to PATH for scripting
-export PATH="$PATH:/usr/local/share/npm/bin"                            # npm
+export NVM_DIR="/home/wesley/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export EDITOR=vi
-export NODE_PATH="/usr/local/lib/node_modules/"	                        # Node JS
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-export ARCHFLAGS='-arch x86_64'

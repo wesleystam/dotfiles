@@ -1,19 +1,17 @@
 [user]
-	name = Wesley Stam
-	email = wesley@stam.me
+  name = Wesley Stam
+  email = Wesley@stam.me
 [alias]
-	st = status
-	ci = commit
-	co = checkout
-	br = branch
-
+  st = status
+  ci = commit
+  co = checkout
+  br = branch
 [color]
-	branch = auto
-	diff = auto
-	interactive = auto
-	status = auto
-
-[guthib]
-	user = wesleystam
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+[github]
+  user = wesleystam
 [push]
-	default = simple
+  default = simple
