@@ -6,6 +6,7 @@ Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-fugitive'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
 Plug 'thoughtbot/vim-rspec'
 
 " Color schemas
