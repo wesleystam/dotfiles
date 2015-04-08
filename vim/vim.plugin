@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-eunuch'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'

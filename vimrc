@@ -13,7 +13,7 @@ set encoding=utf-8
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
-:map <leader>l :set list!<CR>
+:map <leader>v :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 set number
 set expandtab
@@ -67,3 +67,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
