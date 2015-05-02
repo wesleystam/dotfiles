@@ -3,3 +3,4 @@ alias reload="touch tmp/restart.txt"
 alias devlog="tail -f log/development.log"
 
 alias hosts="sudo vim /etc/hosts"
+alias vim="mvim -v"

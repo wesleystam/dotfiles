@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 
-%w(vimrc rvmrc gitconfig gemrc vim).each do |filename|
+%w(vimrc rvmrc gitconfig gemrc vim irbrc railsrc).each do |filename|
   unless File.exist?("#{Dir.home}/.#{filename}")
     File.symlink("#{Dir.home}/dotfiles/#{filename}", "#{Dir.home}/.#{filename}")
   end
