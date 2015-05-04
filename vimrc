@@ -20,14 +20,16 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set clipboard=unnamedplus
+set clipboard=unnamed
 set laststatus=2
 set wrap
 set autoindent
 set history=500
 set mouse=a
+set backspace=indent,eol,start
 
 " search stuff
+set wildignore+=*/node_modules/* " ignore node_modules
 set incsearch     " do incremental searching
 set hlsearch      " highlight search
 set ignorecase    " case insensitive search
@@ -44,9 +46,9 @@ command! Wa wa
 :map <C-l> <C-w>l
 
 " Tabs
-:map <C-n> :tabe<CR>
-:map <C-x> :tabp<CR>
-:map <C-c> :tabn<CR>
+:nmap <C-n> :tabe<CR>
+:nmap <C-x> :tabp<CR>
+:nmap <C-c> :tabn<CR>
 
 " NerdTree
 :noremap ,n :NERDTreeToggle<CR>
