@@ -63,8 +63,9 @@ colorscheme molokai
 " Syntastic settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+set statusline+=%*\ %t\ [%l\ %c]
 
+let g:syntastic_html_checkers = [] " Don't check html files
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1

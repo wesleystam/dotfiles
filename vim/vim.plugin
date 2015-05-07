@@ -10,6 +10,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'geekjuice/vim-spec'
 Plug 'fatih/vim-go'
+Plug 'rking/ag.vim'
 
 " Color schemas
 Plug 'tomasr/molokai'
