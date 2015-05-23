@@ -29,7 +29,7 @@ set mouse=a
 set backspace=indent,eol,start
 
 " search stuff
-set wildignore+=*/node_modules/* " ignore node_modules
+set wildignore+=*/node_modules/*,*/log/* " ignore node_modules
 set incsearch     " do incremental searching
 set hlsearch      " highlight search
 set ignorecase    " case insensitive search
