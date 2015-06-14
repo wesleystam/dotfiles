@@ -17,5 +17,6 @@ Plug 'kchmck/vim-coffee-script'
 
 " Color schemas
 Plug 'tomasr/molokai'
+Plug 'twerth/ir_black'
 
 call plug#end()

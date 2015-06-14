@@ -1,8 +1,8 @@
 set nocompatible
 
 " Load Plugins
-if filereadable(expand("~/.vim/vim.plugin"))
-  source ~/.vim/vim.plugin
+if filereadable(expand("~/.vim/plugin.vim"))
+  source ~/.vim/plugin.vim
 endif
 
 filetype plugin indent on
