@@ -27,9 +27,10 @@ set autoindent
 set history=500
 set mouse=a
 set backspace=indent,eol,start
+set scrolloff=5
 
 " search stuff
-set wildignore+=*/node_modules/*,*/log/* " ignore node_modules
+set wildignore+=*/node_modules/*,*/log/*,*/public/**/*,*/tmp/*" ignore node_modules
 set incsearch     " do incremental searching
 set hlsearch      " highlight search
 set ignorecase    " case insensitive search
@@ -60,12 +61,16 @@ endif
 
 colorscheme molokai
 
+autocmd BufWritePre *.jsx,*.ejs,*.coffee,*.rb,*.erb,*.haml,*.slim,*.sass,*.scss,*.js,*.hamlc :%s/\s\+$//e
+
 " Syntastic settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*\ %t\ [%l\ %c]
+set statusline+=%*\ %t\ [%l:%L\ %c]
 
 let g:syntastic_html_checkers = [] " Don't check html files
+let g:syntastic_sass_checkers = [] " Don't check html files
+let g:syntastic_scss_checkers = [] " Don't check html files
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -77,4 +82,5 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
+let g:rspec_command = "Dispatch spring rspec {spec}"
 let g:mocha_js_command = "!mocha -R spec --recursive  {spec}"

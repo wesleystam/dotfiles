@@ -3,20 +3,34 @@
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-eunuch'
+Plug 'kchmck/vim-coffee-script'
+Plug 'fatih/vim-go'
+Plug 'slim-template/vim-slim'
+Plug 'moll/vim-node'
+Plug 'tpope/vim-dispatch'
+
+" Search and navigation
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
-Plug 'geekjuice/vim-spec'
-Plug 'fatih/vim-go'
 Plug 'rking/ag.vim'
-Plug 'slim-template/vim-slim'
+Plug 'tpope/vim-eunuch'
+
+" Git
+Plug 'tpope/vim-fugitive'
+
+" Syntax
+Plug 'scrooloose/syntastic'
+
+" Testing
+Plug 'geekjuice/vim-spec'
+
+" HTML
 Plug 'mattn/emmet-vim'
-Plug 'kchmck/vim-coffee-script'
 
 " Color schemas
 Plug 'tomasr/molokai'
 Plug 'twerth/ir_black'
+Plug 'wimstefan/Lightning'
+Plug 'jdkanani/vim-material-theme'
 
 call plug#end()
