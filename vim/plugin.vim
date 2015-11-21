@@ -8,6 +8,7 @@ Plug 'fatih/vim-go'
 Plug 'slim-template/vim-slim'
 Plug 'moll/vim-node'
 Plug 'tpope/vim-dispatch'
+Plug 'mxw/vim-jsx'
 
 " Search and navigation
 Plug 'kien/ctrlp.vim'
