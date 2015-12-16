@@ -83,4 +83,4 @@ map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 let g:rspec_command = "Dispatch spring rspec {spec}"
-let g:mocha_js_command = "!mocha -R spec --recursive  {spec}"
+let g:mocha_js_command = "!NODE_ENV=test mocha --harmony -R --reporter spec {spec}"
