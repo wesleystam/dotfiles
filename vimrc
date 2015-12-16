@@ -69,8 +69,9 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*\ %t\ [%l:%L\ %c]
 
 let g:syntastic_html_checkers = [] " Don't check html files
-let g:syntastic_sass_checkers = [] " Don't check html files
-let g:syntastic_scss_checkers = [] " Don't check html files
+let g:syntastic_sass_checkers = [] " Don't check sass files
+let g:syntastic_scss_checkers = [] " Don't check scss files
+let g:syntastic_javascript_checkers = ['jsxhint']
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1

@@ -8,6 +8,7 @@ Plug 'fatih/vim-go'
 Plug 'slim-template/vim-slim'
 Plug 'moll/vim-node'
 Plug 'tpope/vim-dispatch'
+Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
 " Search and navigation
@@ -21,6 +22,7 @@ Plug 'tpope/vim-fugitive'
 
 " Syntax
 Plug 'scrooloose/syntastic'
+Plug 'rizzatti/dash.vim'
 
 " Testing
 Plug 'geekjuice/vim-spec'
