@@ -11,7 +11,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'mxw/vim-jsx'
 
 " Search and navigation
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-eunuch'
