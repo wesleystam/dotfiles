@@ -3,7 +3,7 @@ alias reload="touch tmp/restart.txt"
 alias devlog="tail -f log/development.log"
 alias vi="vim"
 
-if [[ uname == "Darwin" ]]; then
+if [[ uname -eq "Darwin" ]]; then
   alias vim="mvim -v"
 fi
 
