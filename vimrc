@@ -63,6 +63,7 @@ endif
 colorscheme molokai
 
 autocmd BufWritePre *.jsx,*.ejs,*.coffee,*.rb,*.erb,*.haml,*.slim,*.sass,*.scss,*.js,*.hamlc :%s/\s\+$//e
+au BufRead,BufNewFile *.es6 setfiletype javascript
 
 " Syntastic settings
 set statusline+=%#warningmsg#
