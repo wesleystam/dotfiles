@@ -2,6 +2,7 @@ alias s="cd .."
 alias reload="touch tmp/restart.txt"
 alias devlog="tail -f log/development.log"
 alias vi="vim"
+alias updatedb="sudo /usr/libexec/locate.updatedb"
 
 if [[ uname -eq "Darwin" ]]; then
   alias vim="mvim -v"
