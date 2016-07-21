@@ -11,6 +11,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'elixir-lang/vim-elixir'
+Plug 'junegunn/vim-easy-align'
 
 " Search and navigation
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
