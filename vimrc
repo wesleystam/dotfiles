@@ -63,7 +63,9 @@ endif
 colorscheme molokai
 
 autocmd BufWritePre *.jsx,*.ejs,*.coffee,*.rb,*.erb,*.haml,*.slim,*.sass,*.scss,*.js,*.hamlc :%s/\s\+$//e
-au BufRead,BufNewFile *.es6 setfiletype javascript
+au BufRead,BufNewFile *.es6 set filetype=javascript
+autocmd BufNewFile,BufRead *.pdf.erb let b:eruby_subtype='html'
+autocmd BufNewFile,BufRead *.pdf.erb set filetype=eruby
 
 " Syntastic settings
 set statusline+=%#warningmsg#
@@ -86,4 +88,4 @@ map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 let g:rspec_command = "Dispatch rspec {spec}"
-let g:mocha_js_command = "!NODE_ENV=test mocha --harmony -R --reporter spec {spec}"
+let g:mocha_js_command = "Dispatch npm test {spec}"
