@@ -26,6 +26,7 @@ Plug 'tpope/vim-fugitive'
 " Syntax
 Plug 'scrooloose/syntastic'
 Plug 'rizzatti/dash.vim'
+Plug 'ngmy/vim-rubocop'
 
 " Testing
 Plug 'geekjuice/vim-spec'
