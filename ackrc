@@ -1,3 +1,0 @@
---type-add=ruby=.haml,.rake,.scss,.coffee
---ignore-dir=log
---ignore-dir=tmp
