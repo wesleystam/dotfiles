@@ -3,6 +3,7 @@ alias reload="touch tmp/restart.txt"
 alias devlog="tail -f log/development.log"
 alias vi="vim"
 alias updatedb="sudo /usr/libexec/locate.updatedb"
+alias gcom=". $(brew --prefix)/etc/bash_completion"
 
 if [[ uname -eq "Darwin" ]]; then
   alias vim="mvim -v"

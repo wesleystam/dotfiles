@@ -30,7 +30,7 @@ set backspace=indent,eol,start
 set scrolloff=5
 
 " search stuff
-set wildignore+=*/node_modules/*,*/log/*,*/public/**/*,*/tmp/*" ignore node_modules
+set wildignore+=*/node_modules/*,*/log/*,*/public/**/*,*/tmp/* " ignore node_modules
 set incsearch     " do incremental searching
 set hlsearch      " highlight search
 set ignorecase    " case insensitive search
@@ -41,6 +41,7 @@ command! Q q
 command! W w
 command! Qa qa
 command! Wa wa
+command! WA wa
 
 :map <C-h> <C-w>h
 :map <C-j> <C-w>j
@@ -62,7 +63,7 @@ endif
 
 colorscheme molokai
 
-autocmd BufWritePre *.jsx,*.ejs,*.coffee,*.rb,*.erb,*.haml,*.slim,*.sass,*.scss,*.js,*.hamlc :%s/\s\+$//e
+autocmd BufWritePre *.jsx,*.ejs,*.coffee,*.rb,*.erb,*.haml,*.slim,*.sass,*.scss,*.js,*.hamlc,*.yml :%s/\s\+$//e
 au BufRead,BufNewFile *.es6 set filetype=javascript
 autocmd BufNewFile,BufRead *.pdf.erb let b:eruby_subtype='html'
 autocmd BufNewFile,BufRead *.pdf.erb set filetype=eruby
@@ -87,5 +88,5 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
-let g:rspec_command = "Dispatch rspec {spec}"
+let g:rspec_command = "Dispatch bin/rspec {spec}"
 let g:mocha_js_command = "Dispatch npm test {spec}"
