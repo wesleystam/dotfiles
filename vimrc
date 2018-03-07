@@ -68,19 +68,9 @@ au BufRead,BufNewFile *.es6 set filetype=javascript
 autocmd BufNewFile,BufRead *.pdf.erb let b:eruby_subtype='html'
 autocmd BufNewFile,BufRead *.pdf.erb set filetype=eruby
 
-" Syntastic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*\ %t\ [%l:%L\ %c]
-
-let g:syntastic_html_checkers = [] " Don't check html files
-let g:syntastic_sass_checkers = [] " Don't check sass files
-let g:syntastic_scss_checkers = [] " Don't check scss files
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+set statusline=%*\ %t\ [%l:%L\ %c] 
+set statusline+=%{fugitive#statusline()}
+let g:ale_lint_on_text_changed = 'never'
 
 " vim-spec mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>

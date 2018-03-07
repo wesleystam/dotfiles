@@ -24,7 +24,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 
 " Syntax
-Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
 Plug 'rizzatti/dash.vim'
 Plug 'ngmy/vim-rubocop'
 
