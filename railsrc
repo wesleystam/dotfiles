@@ -1,3 +1,7 @@
 --skip-bundle
 --skip-test
+--skip-system-test
+--skip-coffee
+--skip-sprockets
+--webpack
 --database=mysql

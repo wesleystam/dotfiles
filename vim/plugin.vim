@@ -12,6 +12,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'elixir-lang/vim-elixir'
 Plug 'junegunn/vim-easy-align'
+Plug 'pearofducks/ansible-vim'
 
 " Search and navigation
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -36,8 +37,6 @@ Plug 'mattn/emmet-vim'
 
 " Color schemas
 Plug 'tomasr/molokai'
-Plug 'twerth/ir_black'
 Plug 'wimstefan/Lightning'
-Plug 'jdkanani/vim-material-theme'
 
 call plug#end()

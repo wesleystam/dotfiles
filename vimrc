@@ -67,6 +67,7 @@ autocmd BufWritePre *.jsx,*.ejs,*.coffee,*.rb,*.erb,*.haml,*.slim,*.sass,*.scss,
 au BufRead,BufNewFile *.es6 set filetype=javascript
 autocmd BufNewFile,BufRead *.pdf.erb let b:eruby_subtype='html'
 autocmd BufNewFile,BufRead *.pdf.erb set filetype=eruby
+autocmd BufNewFile,BufRead *.axlsx set filetype=ruby
 
 set statusline=%*\ %t\ [%l:%L\ %c] 
 set statusline+=%{fugitive#statusline()}
@@ -74,7 +75,7 @@ let g:ale_lint_on_text_changed = 'never'
 
 " vim-spec mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>s :call RunNearestSpec(0)<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 

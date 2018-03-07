@@ -2,29 +2,13 @@ export PATH="$PATH:./node_modules/.bin"         # Add NPM modules to PATH
 export PATH="$PATH:$HOME/.rvm/bin"              # Add RVM to PATH for scripting
 
 export FZF_DEFAULT_COMMAND='ag -g ""'
-export GOPATH=$HOME/Go
+export GOPATH=$HOME/go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export EDITOR="vim"
-export GREP_OPTIONS='--color=always' 
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export GREP_OPTIONS='--color=auto' 
 
 export NVM_DIR="$HOME/.nvm"
-nvm() {
-  unset -f nvm
-  . $(brew --prefix nvm)/nvm.sh
-  nvm "$@"
-}
- 
-node() {
-  unset -f node
-  . $(brew --prefix nvm)/nvm.sh
-  node "$@"
-}
- 
-npm() {
-  unset -f npm
-  . $(brew --prefix nvm)/nvm.sh
-  npm "$@"
-}
+. $(brew --prefix nvm)/nvm.sh
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
