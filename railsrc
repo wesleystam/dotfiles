@@ -3,5 +3,4 @@
 --skip-system-test
 --skip-coffee
 --skip-sprockets
---webpack
 --database=mysql
