@@ -1,1 +1,6 @@
 My own development setup
+
+Prerequisite:
+ - rvm
+ - nvm
+ - bash-complation

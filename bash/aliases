@@ -5,8 +5,4 @@ alias vi="vim"
 alias updatedb="sudo /usr/libexec/locate.updatedb"
 alias gcom=". $(brew --prefix)/etc/bash_completion"
 
-if [[ uname -eq "Darwin" ]]; then
-  alias vim="mvim -v"
-fi
-
 alias hosts="sudo vim /etc/hosts"
