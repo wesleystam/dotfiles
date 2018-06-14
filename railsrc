@@ -1,6 +1,6 @@
---skip-bundle
 --skip-test
 --skip-system-test
 --skip-coffee
---skip-sprockets
 --database=mysql
+--skip-sprockets
+--webpack=react

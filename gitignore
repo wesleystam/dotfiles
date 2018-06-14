@@ -1,6 +1,5 @@
 .powrc
 .ruby-gemset
 .DS_Store
-.eslintrc.json
 log/*.log
 db/*.sqlite3
