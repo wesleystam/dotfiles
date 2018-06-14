@@ -1,14 +1,27 @@
 export PATH="$PATH:./node_modules/.bin"         # Add NPM modules to PATH
 export PATH="$PATH:$HOME/.rvm/bin"              # Add RVM to PATH for scripting
 
+export LC_CTYPE=C                               # Something about unicode illegal sequence
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PATH="$PATH:/usr/local/opt/go/libexec/bin"
+export PATH="$PATH:$GOPATH/bin"
 export EDITOR="vim"
 export GREP_OPTIONS='--color=auto' 
 
 export NVM_DIR="$HOME/.nvm"
-. $(brew --prefix nvm)/nvm.sh
+. "$(brew --prefix nvm)/nvm.sh" # --no-use
+
+# alias node='unalias node ; unalias npm ; nvm use default ; node $@'
+# alias npm='unalias node ; unalias npm ; nvm use default ; npm $@'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/wesley/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/Users/wesley/Downloads/google-cloud-sdk/path.bash.inc'; fi
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/wesley/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/wesley/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f /usr/local/etc/bash_completion ] && source /usr/local/etc/bash_completion
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
