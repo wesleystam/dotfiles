@@ -1,7 +1,6 @@
 export PATH="$PATH:./node_modules/.bin"         # Add NPM modules to PATH
 export PATH="$PATH:$HOME/.rvm/bin"              # Add RVM to PATH for scripting
 
-export LC_CTYPE=C                               # Something about unicode illegal sequence
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/opt/go/libexec
@@ -22,6 +21,6 @@ if [ -f '/Users/wesley/Downloads/google-cloud-sdk/path.bash.inc' ]; then source 
 if [ -f '/Users/wesley/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/wesley/Downloads/google-cloud-sdk/completion.bash.inc'; fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-[ -f /usr/local/etc/bash_completion ] && source /usr/local/etc/bash_completion
+[ -f /usr/local/etc/bash_completion ] && LC_CTYPE=C source /usr/local/etc/bash_completion
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

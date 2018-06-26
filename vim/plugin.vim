@@ -3,7 +3,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
-Plug 'kchmck/vim-coffee-script'
 Plug 'fatih/vim-go'
 Plug 'slim-template/vim-slim'
 Plug 'moll/vim-node'
@@ -26,7 +25,6 @@ Plug 'tpope/vim-fugitive'
 
 " Syntax
 Plug 'w0rp/ale'
-Plug 'rizzatti/dash.vim'
 Plug 'ngmy/vim-rubocop'
 
 " Testing
