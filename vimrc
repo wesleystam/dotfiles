@@ -8,7 +8,8 @@ endif
 filetype plugin indent on
 syntax enable
 set encoding=utf-8
-
+set re=1
+ 
 " change backup direcoty
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
@@ -62,6 +63,13 @@ if !has('gui_running')
 endif
 
 colorscheme molokai
+
+" No more beeping
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
+
+" Go stuff
+au FileType go nmap <leader>r <Plug>(go-run)
 
 autocmd BufWritePre *.jsx,*.ejs,*.coffee,*.rb,*.erb,*.haml,*.slim,*.sass,*.scss,*.js,*.hamlc,*.yml :%s/\s\+$//e
 au BufRead,BufNewFile *.es6 set filetype=javascript
