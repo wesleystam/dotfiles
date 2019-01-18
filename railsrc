@@ -3,4 +3,3 @@
 --skip-coffee
 --database=mysql
 --skip-sprockets
---webpack=react
