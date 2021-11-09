@@ -1,24 +1,29 @@
 export PATH="$PATH:./node_modules/.bin"         # Add NPM modules to PATH
-export PATH="$PATH:$HOME/.rvm/bin"              # Add RVM to PATH for scripting
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+export PATH="~/bin:$PATH"
+export PATH="$PATH:$HOME/.rvm/bin"
 
-export FZF_DEFAULT_COMMAND='ag -g ""'
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/opt/go/libexec
-export PATH="$PATH:/usr/local/opt/go/libexec/bin"
 export PATH="$PATH:$GOPATH/bin"
+
+export LC_ALL=en_US.UTF-8
+export FZF_DEFAULT_COMMAND='ag -g ""'
 export EDITOR="vim"
-export GREP_OPTIONS='--color=auto' 
+export GREP_OPTIONS='--color=auto'
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
 
 export NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh" # --no-use
 
-# alias node='unalias node ; unalias npm ; nvm use default ; node $@'
-# alias npm='unalias node ; unalias npm ; nvm use default ; npm $@'
-
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/wesley/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/Users/wesley/Downloads/google-cloud-sdk/path.bash.inc'; fi
+if [ -f '/usr/local/opt/google-cloud-sdk/path.bash.inc' ]; then source '/usr/local/opt/google-cloud-sdk/path.bash.inc'; fi
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/wesley/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/wesley/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f '/usr/local/opt/google-cloud-sdk/completion.bash.inc' ]; then source '/usr/local/opt/google-cloud-sdk/completion.bash.inc'; fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f /usr/local/etc/bash_completion ] && LC_CTYPE=C source /usr/local/etc/bash_completion

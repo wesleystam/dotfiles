@@ -1,6 +1,6 @@
 alias s="cd .."
-alias reload="touch tmp/restart.txt"
-alias devlog="tail -f log/development.log"
+alias reload="kill -9 \`ps aux | pgrep -f puma-dev:`${PWD##*}`"\`
+alias devlog="clear; tail -n 500 -f log/development.log"
 alias vi="vim"
 alias updatedb="sudo /usr/libexec/locate.updatedb"
 alias gcom=". $(brew --prefix)/etc/bash_completion"

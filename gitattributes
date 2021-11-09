@@ -1,0 +1,10 @@
+*.c        diff=cpp
+*.h        diff=cpp
+*.ex       diff=elixir
+*.exs      diff=elixir
+*.go       diff=golang
+*.erb      diff=html
+*_spec.rb  diff=rspec
+*.gemspec  diff=ruby
+*.rake     diff=ruby
+*.rb       diff=ruby

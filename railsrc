@@ -1,5 +1,3 @@
 --skip-test
---skip-system-test
---skip-coffee
 --database=mysql
 --skip-sprockets

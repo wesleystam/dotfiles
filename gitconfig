@@ -1,6 +1,8 @@
 [user]
   name = Wesley Stam
   email = wesley@stam.me
+[github]
+  user = wesleystam
 [alias]
   st = status
   ci = commit
@@ -11,10 +13,10 @@
   diff = auto
   interactive = auto
   status = auto
-[github]
-  user = wesleystam
 [push]
   default = simple
+[pull]
+	rebase = true
 [filter "lfs"]
   required = true
   clean = git-lfs clean -- %f
@@ -22,3 +24,7 @@
   process = git-lfs filter-process
 [core]
   excludesfile = ~/.gitignore
+[diff "rspec"]
+  xfuncname = "^[ \t]*((RSpec|describe|context|it|before|after|around|feature|scenario)[ \t].*)$"
+[init]
+	defaultBranch = master
