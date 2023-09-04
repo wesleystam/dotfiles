@@ -30,7 +30,7 @@ set mouse=a
 set backspace=indent,eol,start
 set scrolloff=5
 set relativenumber
-set winwidth=79
+set winwidth=120
 
 " If a file is changed outside of vim, automatically reload it without asking
 set autoread
@@ -42,6 +42,7 @@ set hlsearch      " highlight search
 set ignorecase    " case insensitive search
 set smartcase
 :nmap <C-p> :Files<CR>
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 command! Q q
 command! W w
@@ -106,36 +107,53 @@ nmap <silent> <C-d> <Plug>(ale_next)
 set statusline=%*\ %t\ [%l:%L\ %c]
 set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}%=%-14.([%l:%L],%c%V%)\ %P
 
+let js_fixers = ['prettier', 'eslint']
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'css': ['prettier'],
-\   'typescript': ['prettier', 'eslint'],
-\   'javascript': ['prettier', 'eslint'],
+\   'javascript': js_fixers,
+\   'typescript': js_fixers,
+\   'typescriptreact': js_fixers,
 \   'ruby': ['rubocop'],
 \}
 let g:ale_fix_on_save = 1
+let g:ale_linters = {
+\   'eruby': ['erblint'],
+\}
 
 " vim-spec mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec(0)<CR>
 map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+map <Leader>A :call RunAllSpecs()<CR>
+map <Leader>a :call RunAllWihoutSystemSpecs()<CR>
 
-" " Install Typescript support for COC
-" let g:coc_global_extensions = [ 'coc-tsserver' ]
-" " Remap keys for applying codeAction to the current line.
-" nmap <leader>ac  <Plug>(coc-codeaction)
-" " Apply AutoFix to problem on the current line.
-" nmap <leader>qf  <Plug>(coc-fix-current)
-" " GoTo code navigation.
-" nmap <silent> gd <Plug>(coc-definition)
-" nmap <silent> gy <Plug>(coc-type-definition)
-" nmap <silent> gi <Plug>(coc-implementation)
-" nmap <silent> gr <Plug>(coc-references)
+map <Leader>c '!cucumber' %<CR>
+map <Leader>b :Dispatch yarn tsc --build<CR>
 
-let g:rspec_command = "Dispatch bin/rspec {spec}"
-let g:mocha_js_command = "Dispatch yarn test {spec}"
+
+" Install Typescript support for COC
+let g:coc_global_extensions = [ 'coc-tsserver' ]
+" Remap keys for applying codeAction to the current line.
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+let g:rspec_command = "!rspec {spec}"
+let g:mocha_js_command = "!npm test {spec}"
+
+function! RunAllWihoutSystemSpecs()
+  let s:rspec_command = substitute(g:rspec_command, "{spec}", "--exclude-pattern=\"spec/system/*_spec.rb\"", "g")
+
+  execute s:rspec_command
+endfunction
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM-RUBY CONFIGURATION
@@ -173,7 +191,6 @@ function! PromoteToLet()
 endfunction
 :command! PromoteToLet :call PromoteToLet()
 :map <leader>p :PromoteToLet<cr>
-
 
 let g:rails_projections = {
       \  "app/controllers/*_controller.rb": {
