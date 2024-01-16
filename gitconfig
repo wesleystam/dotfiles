@@ -47,3 +47,5 @@
   xfuncname = "^[ \t]*((RSpec|describe|context|it|before|after|around|feature|scenario)[ \t].*)$"
 [init]
 	defaultBranch = master
+[pager]
+	branch = false

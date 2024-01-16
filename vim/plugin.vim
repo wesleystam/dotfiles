@@ -15,8 +15,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'jparise/vim-graphql'
-Plug 'elixir-lang/vim-elixir'
 Plug 'rust-lang/rust.vim'
+Plug 'github/copilot.vim'
 
 " Search and navigation
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
