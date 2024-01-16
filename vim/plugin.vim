@@ -12,7 +12,6 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-cucumber'
 Plug 'leafgarland/typescript-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pangloss/vim-javascript'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'jparise/vim-graphql'
