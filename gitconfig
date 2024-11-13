@@ -49,3 +49,5 @@
 	defaultBranch = master
 [pager]
 	branch = false
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/

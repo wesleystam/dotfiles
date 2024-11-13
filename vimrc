@@ -46,6 +46,7 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 command! Q q
 command! W w
+command! E e
 command! Qa qa
 command! Wa wa
 command! WA wa
@@ -107,12 +108,14 @@ nmap <silent> <C-d> <Plug>(ale_next)
 set statusline=%*\ %t\ [%l:%L\ %c]
 set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}%=%-14.([%l:%L],%c%V%)\ %P
 
+" let g:ale_completion_enabled = 1
 let js_fixers = ['prettier', 'eslint']
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'css': ['prettier'],
 \   'javascript': js_fixers,
+\   'javascriptreact': js_fixers,
 \   'typescript': js_fixers,
 \   'typescriptreact': js_fixers,
 \   'ruby': ['rubocop'],
@@ -120,7 +123,19 @@ let g:ale_fixers = {
 let g:ale_fix_on_save = 1
 let g:ale_linters = {
 \   'eruby': ['erblint'],
+\   'javascript': ['eslint'],
 \}
+if !empty(finddir('.yarn/sdks', ';'))
+	let g:ale_javascript_eslint_use_global = 1
+	let g:ale_javascript_eslint_executable = 'yarn'
+	let g:ale_javascript_eslint_options = 'run eslint'
+
+	let g:ale_javascript_prettier_use_global = 1
+	let g:ale_javascript_prettier_executable = 'yarn'
+	let g:ale_javascript_prettier_options = 'run prettier'
+endif
+
+au FileType ruby nmap <leader>r :!ruby %<CR>
 
 " vim-spec mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
@@ -132,7 +147,6 @@ map <Leader>a :call RunAllWihoutSystemSpecs()<CR>
 map <Leader>c '!cucumber' %<CR>
 map <Leader>b :Dispatch yarn tsc --build<CR>
 
-
 let g:rspec_command = "!rspec {spec}"
 let g:mocha_js_command = "!npm test {spec}"
 
@@ -142,6 +156,9 @@ function! RunAllWihoutSystemSpecs()
   execute s:rspec_command
 endfunction
 
+"copilot keybindings
+"ALT-]
+inoremap ‘ <Plug>(copilot-next)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM-RUBY CONFIGURATION
