@@ -1,6 +1,8 @@
 #!/usr/bin/ruby
 
-%w[vim vimrc gitconfig gitattributes gemrc irbrc railsrc zshrc].each do |filename|
+system('git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm')
+
+%w[vim vimrc gitconfig gitattributes gemrc irbrc railsrc tmux.conf zshrc].each do |filename|
   unless File.exist?("#{Dir.home}/.#{filename}")
     File.symlink("#{Dir.home}/dotfiles/#{filename}", "#{Dir.home}/.#{filename}")
   end

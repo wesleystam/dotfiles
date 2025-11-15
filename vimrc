@@ -125,14 +125,12 @@ let g:ale_linters = {
 \   'eruby': ['erblint'],
 \   'javascript': ['eslint'],
 \}
-if !empty(finddir('.yarn/sdks', ';'))
-	let g:ale_javascript_eslint_use_global = 1
-	let g:ale_javascript_eslint_executable = 'yarn'
-	let g:ale_javascript_eslint_options = 'run eslint'
-
-	let g:ale_javascript_prettier_use_global = 1
-	let g:ale_javascript_prettier_executable = 'yarn'
-	let g:ale_javascript_prettier_options = 'run prettier'
+let s:sdks = finddir('.yarn/sdks', ';')
+if !empty(s:sdks)
+  let g:ale_javascript_eslint_use_global = 1
+  let g:ale_javascript_eslint_executable = s:sdks . '/eslint/bin/eslint.js'
+  let g:ale_javascript_prettier_use_global = 1
+  let g:ale_javascript_prettier_executable = s:sdks . '/prettier/bin/prettier.js'
 endif
 
 au FileType ruby nmap <leader>r :!ruby %<CR>
@@ -148,7 +146,7 @@ map <Leader>c '!cucumber' %<CR>
 map <Leader>b :Dispatch yarn tsc --build<CR>
 
 let g:rspec_command = "!rspec {spec}"
-let g:mocha_js_command = "!npm test {spec}"
+let g:mocha_js_command = "!CI=true npm test {spec}"
 
 function! RunAllWihoutSystemSpecs()
   let s:rspec_command = substitute(g:rspec_command, "{spec}", "--exclude-pattern=\"spec/system/*_spec.rb\"", "g")

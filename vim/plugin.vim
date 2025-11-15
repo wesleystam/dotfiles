@@ -17,6 +17,7 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'jparise/vim-graphql'
 Plug 'rust-lang/rust.vim'
 Plug 'github/copilot.vim'
+Plug 'ap/vim-css-color'
 
 " Search and navigation
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -25,6 +26,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-eunuch'
 Plug 'romainl/vim-cool'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Git
 Plug 'tpope/vim-fugitive'
