@@ -18,7 +18,7 @@ alias s="cd .."
 alias devlog="tail -f -n 500 log/development.log"
 alias reload="kill -9 \`ps aux | pgrep -f puma-dev:`${PWD##*}`"\`
 alias hosts="sudo vim /etc/hosts"
-alias gitstaging="git br -D staging; git co -b staging && git push -f -u origin staging"
+alias gitstaging="git br -D staging && git co -b staging && git push -f -u origin staging"
 
 export EDITOR="vim"
 
@@ -27,10 +27,10 @@ export EDITOR="vim"
 export PATH="./bin:$PATH"
 
 # MySQL stuff
-export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/mysql@5.7/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/mysql@5.7/include"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql@5.7/lib/pkgconfig"
+export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/mysql@8.0/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/mysql@8.0/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql@8.0/lib/pkgconfig"
 
 export ASDF_GOLANG_MOD_VERSION_ENABLED=true
 
@@ -40,6 +40,7 @@ source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 
 # Rust
 . "$HOME/.cargo/env"
+export PATH="$PATH:/Users/wesley/.cargo/bin"
 
 # Dont share the history in every screen
 setopt nosharehistory
